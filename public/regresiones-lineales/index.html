@@ -1,0 +1,25 @@
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>modelo de regresion</title>
+  <link rel="shortcut icon"
+    href="https://user-images.githubusercontent.com/13250741/64669187-33b55380-d47e-11e9-8bbf-c02a9d42f9a7.png"
+    type="image/x-icon">
+  <script src="https://cdn.jsdelivr.net/npm/@tensorflow/tfjs@1.7.4/dist/tf.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@tensorflow/tfjs-vis@1.0.2/dist/tfjs-vis.umd.min.js"></script>
+</head>
+
+<body>
+  <br>
+  JSON File <input type="file" id="upload-json" /><br>
+  Binary File <input type="file" id="upload-weights" /><br>
+  <input type="button" value="Cargar Modelo" onclick="cargarModelo();" /> <br>
+  <input type="button" value="detener aprendizaje" onclick="stopTraining = true">
+  <input type="button" value="guardar modelo" onclick="guardarModelo()">
+  <input type="button" value="Curva de Inferencia" onclick="verCurvaInferencia();" />
+  <script src="./script.js"></script>
+</body>
+
+</html>
