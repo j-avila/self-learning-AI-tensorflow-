@@ -3,14 +3,17 @@
   "version": "1.0.0",
   "description": "tutorial",
   "main": "index.js",
+  "homepage": "https://j-avila.github.io/self-learning_img-recognize",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "nodemon": "nodemon -e js,html,css"
+    "nodemon": "nodemon -e js,html,css",
+    "deploy": "gh-pages -d public/clasificacion-de-imagenes "
   },
   "author": "",
   "license": "ISC",
   "dependencies": {
     "express": "^4.17.1",
+    "gh-pages": "^4.0.0",
     "nodemon": "^2.0.6"
   }
 }
