@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>calsificacionde imagenes</title>
+  <link rel="shortcut icon"
+    href="https://user-images.githubusercontent.com/13250741/64669187-33b55380-d47e-11e9-8bbf-c02a9d42f9a7.png"
+    type="image/x-icon">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+  <link rel="stylesheet" href="https://code.getmdl.io/1.3.0/material.indigo-pink.min.css">
+  <script defer src="https://code.getmdl.io/1.3.0/material.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@tensorflow/tfjs"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@tensorflow-models/mobilenet"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@tensorflow-models/knn-classifier"></script>
+
+  <style>
+    body {
+      background: rgb(201, 201, 201);
+    }
+
+    .app {
+      max-width: 36vw;
+      margin: 5vh auto;
+      display: grid;
+      grid-template-columns: 2fr 1fr;
+      column-gap: 20px;
+    }
+
+    .chips-holder {
+      max-width: 200px;
+    }
+  </style>
+</head>
+
+<body>
+  <div style="display: none !important">
+    <img id="img" crossorigin src="./JlUvsxa.jpg" width="227" height="227">
+    <button onclick="cambiarimagen()">cambiar imagen</button>
+    <div id="descripcion">
+
+    </div>
+  </div>
+
+  <div class="app">
+    <div class="demo-card-square mdl-card mdl-shadow--2dp">
+      <div class="mdl-card__title mdl-card--expand">
+        <video autoplay flip playsinline muted id="webcam" width="100%" height="100%"></video>
+      </div>
+      <div class="mdl-card__supporting-text">
+        <div id="console"></div>
+        <div id="console2"></div>
+      </div>
+      <div class="mdl-card__actions mdl-card--border">
+        <button id="stop" class="mdl-button mdl-js-button mdl-js-ripple-effect" onclick="startScan(true)">start
+          scan</button>
+        <button id="stop" class="mdl-button mdl-js-button mdl-js-ripple-effect" onclick="startScan(false)">stop</button>
+      </div>
+    </div>
+
+    <div class="settings">
+      <h6>Entrenar Modelo</h6>
+      <div class="chips-holder">
+        <button id="clase-a" class="mdl-chip mdl-chip--contact" onclick="addExample(1)">
+          <span class="mdl-chip__contact mdl-color--teal mdl-color-text--white">1</span>
+          <span class="mdl-chip__text">teclado</span>
+        </button>
+        <button id="clase-b" class="mdl-chip mdl-chip--contact" onclick="addExample(2)">
+          <span class="mdl-chip__contact mdl-color--teal mdl-color-text--white">2</span>
+          <span class="mdl-chip__text">Pollo</span>
+        </button>
+        <button id="clase-c" class="mdl-chip mdl-chip--contact" onclick="addExample(3)">
+          <span class="mdl-chip__contact mdl-color--teal mdl-color-text--white">3</span>
+          <span class="mdl-chip__text">Vaso</span>
+        </button>
+        <button id="clase-d" class="mdl-chip mdl-chip--contact" onclick="addExample(4)">
+          <span class="mdl-chip__contact mdl-color--teal mdl-color-text--white">4</span>
+          <span class="mdl-chip__text">Jose</span>
+        </button>
+        <button id="clase-e" class="mdl-chip mdl-chip--contact" onclick="addExample(5)">
+          <span class="mdl-chip__contact mdl-color--teal mdl-color-text--white">5</span>
+          <span class="mdl-chip__text">Surprise!</span>
+        </button>
+        <button id="clase-f" class="mdl-chip mdl-chip--contact" onclick="addExample(6)">
+          <span class="mdl-chip__contact mdl-color--teal mdl-color-text--white">6</span>
+          <span class="mdl-chip__text">ok</span>
+        </button>
+      </div>
+
+    </div>
+
+  </div>
+
+
+
+
+
+
+  <script src='script.js?v=12'></script>
+</body>
+
+</html>
